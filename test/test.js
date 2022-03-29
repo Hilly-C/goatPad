@@ -132,6 +132,24 @@ class Website {
     // }
     return true;
   }
+    SettingsRedirect(){
+    return true;
+  }
+    EditRedirect(){
+    return true;
+  }
+    WalletRedirect(){
+    return true;
+  }
+    CollectionRedirect(){
+    return true;
+  }
+    FavoritesRedirect(){
+      return true;
+    }
+    WatchlistRedirect(){
+      return true;
+    }
 }
 
 // instance of the ethereum network. Each node hosts all the Ethereum transactions and syncs constantly with all the other nodes in the network
