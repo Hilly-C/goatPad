@@ -1,3 +1,7 @@
+body{
+  background-color: bisque;
+}
+
 nav ul{
     display:flex;
     flex-direction: row;
@@ -9,3 +13,45 @@ nav ul{
     padding: 1em;
   }
   
+  #main{
+    height:400px;
+    text-align:center;
+    color:greenyellow;
+    background-image: url('img/Monkey1.png');
+    background-size:auto; 
+  }
+
+  #main h1{
+    background-color:red;
+  }
+
+  #main p{
+    background-color:red;
+  }
+
+  #main a{
+    background-color:red;
+  }
+
+  h2 + p{
+    background-color:black;
+    color:white;
+    padding:1em;
+  }
+  
+  #cards{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    
+  }
+  
+  .card{
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:space-around;
+    align-items:center;
+    width: 200px;
+    border: 1px dashed black;
+    margin:1em;
+  }
