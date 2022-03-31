@@ -67,6 +67,14 @@ class Wallet {
   setSFTs(){
     return true;
   }
+  /**
+   * transaction that gives very small amount of ethereum and takes away to confirm right wallet
+   * asks user for the amount that was in the transaction like a confirmation code
+   * @returns 
+   */
+  testTransaction(){
+    return true;
+  }
 }
 
 class Website {
@@ -503,7 +511,7 @@ describe("e", function () {
   }); 
 });
 
-//Ethnode able to accept transcation input from website
+//Ethnode able to accept transaction input from website
 var assert = require("assert");
 describe("e", function () {
   it("should fire ethNode.connect when connect button is clicked", function () {
@@ -531,4 +539,18 @@ describe("e", function () {
     }
   });
 });
+
+var assert = require("assert");
+describe("e", function () {
+  it("should fire ethNode.connect when connect button is clicked", function () {
+    try {
+      equal(website.btnOnSubmitClick(), wallet.connect());
+      equal(myWallet.testTransaction(), true);
+    } catch (error) {
+      let errorMessage = "this.SFT is not a valid SFT";
+      equal(e.toString(), errorMessage);
+    }
+  });
 });
+});
+
