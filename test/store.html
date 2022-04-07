@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>SFT</title>
+    <title>SFTStore</title>
 </head>
 <body>
 
@@ -26,39 +26,41 @@
     <div id="storeCards">
 
         <div class="card">
-            
-            <button onclick="btnConnectWalletOnClick()" id="btnConnectWallet">Buy This!</button>
+            <button onclick="btnBuyThis(this)" id="btnBuyThis">Buy This!</button>
             <img src="img/Monkey1.png">
-            <p>Tier 1 gets an original image!</p>
-            <p>Dope!</p>
+            <p>A traditional monkey image!</p>
+            <p id = "description"> This is where the extended description will go.</p>
         </div>
 
         <div class="card">
-            
-            <button onclick="btnConnectWalletOnClick()" id="btnConnectWallet">Buy This!</button>
+            <button onclick="btnBuyThis(this)" id="btnBuyThis">Buy This!</button>
             <img src="img/NewbieSFT.png">
-            <p>Tier 2 has an awesome line!</p>
-            <p>Awesome!</p>
+            <p>A high-class diva!</p>
+            <p id = "description"> This is where the extended description will go.</p>
         </div>
 
         <div class="card">
-            
-            <button onclick="btnConnectWalletOnClick()" id="btnConnectWallet">Buy This!</button>
+            <button onclick="btnBuyThis(this)" id="btnBuyThis">Buy This!</button>
             <img src="img/NoobieSFT.png">
-            <p>Tier 3 gets you double the line, but still a baller!</p>
-            <p>Radical!</p>
+            <p>One Blocky Boi!</p>
+            <p id = "description"> This is where the extended description will go.</p>
         </div>
 
         <div class="card ">
-            
-            <button onclick="btnConnectWalletOnClick()" id="btnConnectWallet">Buy This!</button>
+            <button onclick="btnBuyThis(this)" id="btnBuyThis">Buy This!</button>
             <img src="img/NubieSFT.png">
-            <p>Tier 4 and beyond will keep getting more lines, allowing you to get most of the image on the cheap.</p>
-            <p>Frugal!</p>
-            
+            <p>Smooth as Honey!</p>
+            <p id = "description"> This is where the extended description will go.</p>  
         </div>
     </div>
 
-    
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span onclick="closeModal()" class="close">&times;</span>
+        </div>
+      
+      </div>
 </body>
 </html>
