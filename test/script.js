@@ -46,20 +46,28 @@ function purchaseSFT(){
 }
 
 function ranking(SFTID, count){
+  // checks the count thats tied to the number of SFTID of a certain monkey sold and then updates the rank if it reach a theashold
   if(count < 100 && SFTID == "M1R0"){
+    // later on we need to create a string to get the right image by combing rank png with the monkey png
+    // we would need to alter the img src by first setting the monkey to background and then overlaying ranking over them
+    // not sure how to do that so for now we are cycling through them
     //rank = 
     //SFTID = "M" + num + "R" + rank;
+    //return SFTID;
     SFTID = document.querySelector('M1R0');
     return SFTID;
   }
+  // the non-rank and first rank have the same ID
   if(count >= 100 && count < 1000 && SFTID == "M1R0"){
     SFTID = document.querySelector('M1R1');
     return SFTID;
   }
+  // the next one has the new id from rank 1
   if(count >= 1000 && count < 2000 && SFTID == "M1R1"){
     SFTID = document.querySelector('M1R2')
     return SFTID;
   }
+  
   if(count >= 2000 && SFTID == "M1R2"){
     SFTID = document.querySelector('M1R3');
     return SFTID;
