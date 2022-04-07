@@ -35,5 +35,35 @@ window.onclick = function(event) {
 }
 
 function purchaseSFT(){
+  //var count = 0;
+  //var m1SFT = document.querySelector('#M1R0')
+  //var num = document.querySelector('#M1');
+  //var rank = document.querySelector('#R0')
+  //var SFTID = "M" + num + "R" + rank;
+  
+
+
+}
+
+function ranking(SFTID, count){
+  if(count < 100 && SFTID == "M1R0"){
+    //rank = 
+    //SFTID = "M" + num + "R" + rank;
+    SFTID = document.querySelector('M1R0');
+    return SFTID;
+  }
+  if(count >= 100 && count < 1000 && SFTID == "M1R0"){
+    SFTID = document.querySelector('M1R1');
+    return SFTID;
+  }
+  if(count >= 1000 && count < 2000 && SFTID == "M1R1"){
+    SFTID = document.querySelector('M1R2')
+    return SFTID;
+  }
+  if(count >= 2000 && SFTID == "M1R2"){
+    SFTID = document.querySelector('M1R3');
+    return SFTID;
+  }
+ 
 
 }
