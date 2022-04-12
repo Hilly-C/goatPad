@@ -58,20 +58,36 @@ function ranking(SFTID, count){
     return SFTID;
   }
   // the non-rank and first rank have the same ID
-  if(count >= 100 && count < 1000 && SFTID == "M1R0"){
+  if(count >= 100 && count < 1000 && (SFTID == "M1R0" || SFTID == "M1R1")){
     SFTID = document.querySelector('M1R1');
     return SFTID;
   }
   // the next one has the new id from rank 1
-  if(count >= 1000 && count < 2000 && SFTID == "M1R1"){
+  if(count >= 1000 && count < 2000 && (SFTID == "M1R1" || SFTID == "M1R2")){
     SFTID = document.querySelector('M1R2')
     return SFTID;
   }
   
-  if(count >= 2000 && SFTID == "M1R2"){
+  if(count >= 2000 && (SFTID == "M1R2" || SFTID == "M1R3")){
     SFTID = document.querySelector('M1R3');
     return SFTID;
   }
- 
-
+  // These is able to search for a SFT based on the charaters you put into the searchbar 
+  // Later on want to include the ability to look for an array, object, or multiple things
+ function search(input){
+   //calls the searchbar under store.html
+    var input = document.getElementById('search').value
+    var input = input.toLowerCase();
+    // gets the list of SFT based on the class SFT in the index
+    var x = document.getElementsByClassName('SFT');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+  }
 }
