@@ -9,8 +9,6 @@ class wallet {
     this.SFTS = SFTS;
   }
 
-  // This is Semaan edit to see if this visual studio code thing works
-  
   ConnectWallet() {
     return this.id;
   }
