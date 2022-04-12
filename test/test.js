@@ -383,6 +383,14 @@ describe("SFT image rendered", function () {
       assert.equal(e.toString(), errorMessage);
     }
   });
+  it("SFT rank is changed after being bought enough times", function(){
+    try{
+      assert.equal(sfts.ranking("M1R0", 101), "M1R1");
+   } catch(error){
+     let errorMessage = "could not get rank and image";
+     assert.equal(e.toString(), errorMessage);
+   }
+  });
 });
 
 //end to end examples:
