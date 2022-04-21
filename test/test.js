@@ -385,7 +385,17 @@ describe("SFT image rendered", function () {
   });
   it("SFT rank is changed after being bought enough times", function(){
     try{
+      assert.equal(sfts.ranking("M1R0", 0), "M1R0");
+      assert.equal(sfts.ranking("M1R0", 10), "M1R0");
+      assert.equal(sfts.ranking("M1R0", 50), "M1R0");
+      assert.equal(sfts.ranking("M1R0", 99), "M1R0");
       assert.equal(sfts.ranking("M1R0", 101), "M1R1");
+      assert.equal(sfts.ranking("M1R0", 199), "M1R1");
+      assert.equal(sfts.ranking("M1R1", 1000), "M1R2");
+      assert.equal(sfts.ranking("M1R2", 1001), "M1R2");
+      assert.equal(sfts.ranking("M1R2", 2000), "M1R3");
+      assert.equal(sfts.ranking("M1R3", 3000), "M1R3");
+
    } catch(error){
      let errorMessage = "could not get rank and image";
      assert.equal(e.toString(), errorMessage);
