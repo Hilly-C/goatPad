@@ -90,4 +90,9 @@ function ranking(SFTID, count){
         }
     }
   }
+  // Need to get something from wallet and post it on the website as selling
+  // Not sure how to get image from wallet or how to post it to website
+  function selling(){
+
+  }
 }
