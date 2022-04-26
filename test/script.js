@@ -72,8 +72,8 @@ function ranking(SFTID, count){
     SFTID = document.querySelector('M1R3');
     return SFTID;
   }
-  // These is able to search for a SFT based on the charaters you put into the searchbar 
-  // Later on want to include the ability to look for an array, object, or multiple things
+  // This is able to search for a SFT based on the charaters you put into the searchbar 
+  // Later on want to include the ability to look for authors, kinds, and more detailed searches
  function search(input){
    //calls the searchbar under store.html
     var input = document.getElementById('search').value
@@ -89,5 +89,10 @@ function ranking(SFTID, count){
             x[i].style.display="list-item";                 
         }
     }
+  }
+  // Need to get something from wallet and post it on the website as selling
+  // Not sure how to get image from wallet or how to post it to website
+  function selling(){
+
   }
 }
